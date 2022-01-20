@@ -19,7 +19,7 @@
  * <http://www.gnu.org/licenses/gpl-3.0.html>.
  */
 
-package com.worldnote;
+package com.moubieworldnote;
 
 import org.bukkit.World;
 import org.bukkit.entity.Player;

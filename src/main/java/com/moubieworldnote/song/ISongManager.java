@@ -19,33 +19,35 @@
  * <http://www.gnu.org/licenses/gpl-3.0.html>.
  */
 
-package com.worldnote.song;
+package com.moubieworldnote.song;
 
-import org.bukkit.World;
+import com.xxmicloxx.NoteBlockAPI.model.Song;
+import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author MouBieCat
  */
-public final class WorldSongManager {
+public interface ISongManager {
 
-    private final Map<World, String> worldSongManager = new HashMap<>();
+    /**
+     * Play song to player
+     * @param player player
+     * @param songName song name
+     */
+    void playSongToPlayer(final @NotNull Player player, final @NotNull String songName);
 
-    public void register(final @NotNull World world, final @NotNull String songName) {
-        this.worldSongManager.put(world, songName);
-    }
+    /**
+     * Play song to player
+     * @param player player
+     * @param song song
+     */
+    void playSongToPlayer(final @NotNull Player player, final @NotNull Song song);
 
-    public void unRegister(final @NotNull World world) {
-        this.worldSongManager.remove(world);
-    }
-
-    @Nullable
-    public String getSongName(final @NotNull World world) {
-        return this.worldSongManager.get(world);
-    }
+    /**
+     * Stop song to player
+     * @param player player
+     */
+    void stopSongToPlayer(final @NotNull Player player);
 
 }

@@ -19,11 +19,11 @@
  * <http://www.gnu.org/licenses/gpl-3.0.html>.
  */
 
-package com.worldnote;
+package com.moubieworldnote;
 
-import com.worldnote.song.ISongManager;
-import com.worldnote.song.SongManager;
-import com.worldnote.song.WorldSongManager;
+import com.moubieworldnote.song.ISongManager;
+import com.moubieworldnote.song.SongManager;
+import com.moubieworldnote.song.WorldSongManager;
 import com.xxmicloxx.NoteBlockAPI.model.Song;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
