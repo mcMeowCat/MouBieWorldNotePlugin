@@ -1,4 +1,4 @@
-name: WorldNotePlugin
+name: MouBieWorldNotePlugin
 
 version: '${project.version}'
 api-version: ${plugin.api.version}
