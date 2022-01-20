@@ -1,0 +1,10 @@
+name: WorldNotePlugin
+
+version: '${project.version}'
+api-version: ${plugin.api.version}
+
+authors: [ MouBieCat ]
+
+depend: [ NoteBlockAPI ]
+
+main: com.worldnote.MouBieCat

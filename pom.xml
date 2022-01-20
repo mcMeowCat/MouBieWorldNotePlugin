@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cat.moubiecat</groupId>
+    <artifactId>MouBieCat</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>WorldNotePlugin</name>
+
+    <!-- Base info -->
+    <properties>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jdk.version>17</jdk.version>
+        <java.version>17</java.version>
+
+        <!-- api-version: -->
+        <plugin.api.version>1.18</plugin.api.version>
+        <!-- maven library version -->
+        <spigot.api.version>1.18-R0.1-SNAPSHOT</spigot.api.version>
+
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!-- jetbrains -->
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>23.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Spigot -->
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>${spigot.api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- NoteBlockAPI -->
+        <dependency>
+            <groupId>com.xxmicloxx</groupId>
+            <artifactId>NoteBlockAPI</artifactId>
+            <version>1.6.2-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>D:/NoteBlockAPI-1.6.1-SNAPSHOT.jar</systemPath>
+            <!-- <systemPath>Your jar path</systemPath> -->
+        </dependency>
+    </dependencies>
+
+    <!-- Builder -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+</project>
